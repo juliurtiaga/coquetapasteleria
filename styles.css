@@ -1,0 +1,431 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f0e8;
+    color: #111;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.navbar {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 28px 45px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 10;
+}
+
+.navbar a {
+    color: white;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    transition: opacity 0.3s ease;
+}
+
+.navbar a:hover {
+    opacity: 0.6;
+}
+
+.brand {
+    font-weight: 500;
+}
+
+.contact-link {
+    font-weight: 400;
+}
+
+
+/* =========================
+   FOTO PRINCIPAL
+========================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 45vh;
+
+    overflow: hidden;
+
+    background-color: #000;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* OSCURECER UN POQUITO LA FOTO */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.18);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.hero-logo {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 5;
+}
+
+.hero-logo img {
+    width: 165px;
+    height: 165px;
+
+    display: block;
+}
+
+
+/* =========================
+   CATÁLOGO
+========================= */
+
+.catalogo {
+    background-color: #f6f0e8;
+
+    padding: 80px 7% 100px;
+}
+
+
+/* =========================
+   TÍTULO DEL CATÁLOGO
+========================= */
+
+.catalogo-header {
+    text-align: center;
+
+    margin-bottom: 70px;
+}
+
+.catalogo-header h1 {
+    font-size: 28px;
+
+    font-weight: 400;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 12px;
+}
+
+.catalogo-header p {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    color: #555;
+}
+
+
+/* =========================
+   CATEGORÍAS
+========================= */
+
+.categoria {
+    margin-bottom: 110px;
+}
+
+.categoria:last-child {
+    margin-bottom: 0;
+}
+
+.categoria-titulo {
+    font-size: 22px;
+
+    font-weight: 400;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   PRODUCTOS
+========================= */
+
+.productos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 55px 30px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   PRODUCTO
+========================= */
+
+.producto {
+    background-color: transparent;
+}
+
+
+/* FOTO DEL PRODUCTO */
+
+.producto-imagen {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: #ddd;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* INFORMACIÓN DEL PRODUCTO */
+
+.producto-info {
+    padding-top: 18px;
+}
+
+.producto-info h3 {
+    font-size: 17px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 8px;
+}
+
+.detalle {
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #555;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   PRECIOS
+========================= */
+
+.precios {
+    margin-top: 10px;
+}
+
+.precios p {
+    font-size: 13px;
+
+    color: #555;
+
+    margin-bottom: 5px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    max-width: 260px;
+}
+
+.precios span {
+    color: #111;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.home-footer {
+    background-color: #f6f0e8;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    padding: 70px 35px;
+
+    text-align: center;
+}
+
+.home-footer h2 {
+    font-size: 16px;
+
+    font-weight: 400;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 40px;
+}
+
+.social-links a {
+    color: #111;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    /* HEADER */
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .navbar a {
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    /* FOTO PRINCIPAL */
+
+    .hero {
+        height: 45vh;
+    }
+
+
+    /* LOGO */
+
+    .hero-logo img {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    /* CATÁLOGO */
+
+    .catalogo {
+        padding: 60px 20px 80px;
+    }
+
+    .catalogo-header {
+        margin-bottom: 55px;
+    }
+
+    .catalogo-header h1 {
+        font-size: 22px;
+
+        letter-spacing: 4px;
+    }
+
+
+    /* CATEGORÍAS */
+
+    .categoria {
+        margin-bottom: 80px;
+    }
+
+    .categoria-titulo {
+        font-size: 19px;
+
+        letter-spacing: 2.5px;
+
+        margin-bottom: 30px;
+    }
+
+
+    /* PRODUCTOS */
+
+    .productos {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .producto-info h3 {
+        font-size: 16px;
+    }
+
+
+    /* FOOTER */
+
+    .home-footer {
+        padding: 60px 20px;
+    }
+
+    .social-links {
+        gap: 25px;
+    }
+
+}
